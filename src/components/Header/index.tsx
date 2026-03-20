@@ -1,11 +1,14 @@
 import { HeaderBackground, HeaderContainer, Logo } from './styled'
 import logo from '../../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => (
   <HeaderBackground>
     <HeaderContainer className="container">
       <a href="#">Restaurantes</a>
-      <Logo src={logo} alt="Efood" />
+      <Link to="/">
+        <Logo src={logo} alt="Efood" />
+      </Link>
       <a href="#">0 produto(s) no carrinho</a>
     </HeaderContainer>
   </HeaderBackground>
