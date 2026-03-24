@@ -9,6 +9,9 @@ export const HeaderBackground = styled.header`
   align-items: center;
   padding: 48px 0;
   max-width: 100%;
+  z-index: 100;
+  position: sticky;
+  top: 0;
 `
 
 export const HeaderContainer = styled.div`
