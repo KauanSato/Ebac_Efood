@@ -4,7 +4,7 @@ import { cores } from '../../../styles'
 export const Card = styled.div`
   background-color: #fff;
   width: 472px;
-  height: 398px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -55,10 +55,8 @@ export const TagMore = styled.div`
 
 export const CardDiv = styled.div`
   display: flex;
-  position: relative;
   flex-direction: column;
   padding: 8px;
-  height: 100%;
   padding-bottom: 16px;
 
   .LearnMore {

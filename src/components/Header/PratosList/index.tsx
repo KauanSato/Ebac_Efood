@@ -1,38 +1,35 @@
-import Product from '../Pratos'
+import Prato from '../Pratos'
 import { CardList, Container } from './styles'
-import Pratos from '../../../models/Pratos'
 import { useState } from 'react'
 import ProductModal from '../PratosModal'
 
-export interface Prato {
+export interface InfoPrato {
   id: number
-  title: string
-  desc: string
-  descP: string
-  image: string
-  preco: string
+  nome: string
+  descricao: string
+  foto: string
+  preco: number
 }
 
 export type Props = {
-  pratos: Pratos[]
+  pratos: InfoPrato[]
 }
 
 const PratoList = ({ pratos }: Props) => {
   const [modal, setModal] = useState({
     isVisible: false,
-    data: null as Prato | null
+    data: null as InfoPrato | null
   })
 
   return (
     <Container>
       <CardList>
         {pratos.map((prato) => (
-          <Product
+          <Prato
             key={prato.id}
-            title={prato.title}
-            image={prato.image}
-            desc={prato.desc}
-            descP={prato.descP}
+            title={prato.nome}
+            image={prato.foto}
+            desc={prato.descricao}
             preco={prato.preco}
             onOpen={() => setModal({ isVisible: true, data: prato })}
           />

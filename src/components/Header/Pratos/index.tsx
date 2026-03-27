@@ -5,14 +5,12 @@ type Props = {
   image: string
   title: string
   desc: string
-  descP: string
   link?: string
-  preco: string
+  preco: number
   onOpen: () => void
 }
 
-export const Prato = ({ image, title, desc, onOpen }: Props) => {
-  //const LinkAdress = link
+const Prato = ({ image, title, desc, onOpen }: Props) => {
   return (
     <S.Card>
       <S.CardImage src={image} />
