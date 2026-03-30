@@ -11,6 +11,7 @@ const ProductsList = ({ restaurantes }: Props) => (
     <CardList>
       {restaurantes.map((restaurante) => (
         <Product
+          id={restaurante.id}
           key={restaurante.id}
           title={restaurante.titulo}
           destaque={restaurante.destacado}

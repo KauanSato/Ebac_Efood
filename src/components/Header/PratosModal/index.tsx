@@ -22,7 +22,7 @@ const ProductModal = ({ product, isVisible, onClose }: Props) => {
             <h4>{product.nome}</h4>
             <p>{product.descricao}</p>
             <p>
-              Serve de <span>2 a 3</span>
+              Serve de <span>{product.porcao}</span>
             </p>
             <S.BotaoModal>Adicionar ao carrinho - {product.preco}</S.BotaoModal>
           </div>

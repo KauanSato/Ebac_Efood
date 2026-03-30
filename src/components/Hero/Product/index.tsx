@@ -4,6 +4,7 @@ import Tag from '../../Tag'
 import * as S from './styles'
 
 type Props = {
+  id: number
   image: string
   title: string
   rating: string
@@ -13,6 +14,7 @@ type Props = {
 }
 
 export const Product = ({
+  id,
   image,
   title,
   rating,
@@ -44,7 +46,7 @@ export const Product = ({
         </S.Titulo>
         <S.Descricao>{getDescricao(desc)}</S.Descricao>
         <div className="LearnMore">
-          <Button type="link" to="/Perfil/:id" title="LearnMore">
+          <Button type="link" to={`/perfil/${id}`} title="LearnMore">
             Saiba mais
           </Button>
         </div>
