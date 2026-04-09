@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../../styles'
+import { breakpoints, cores } from '../../../styles'
 
 export const Modal = styled.div`
   position: fixed;
@@ -50,11 +50,26 @@ export const ModalContent = styled.div`
   display: flex;
   width: 1024px;
 
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    padding: 16px;
+    max-height: 80vh;
+    overflow-y: auto;
+    width: 90%;
+  }
+
   img {
     width: 280px;
     height: 280px;
     object-fit: cover;
     margin-right: 24px;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      width: 100%;
+      height: 200px;
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
   }
 
   h4 {
@@ -79,4 +94,9 @@ export const BotaoModal = styled.button`
   font-size: 14px;
   cursor: pointer;
   width: fit-content;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    padding: 12px;
+  }
 `

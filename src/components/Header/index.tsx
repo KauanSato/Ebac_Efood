@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <HeaderBackground>
       <HeaderContainer className="container">
-        <a>Restaurantes</a>
         <Link to="/">
-          <Logo src={logo} alt="Efood" />
+          <a>Restaurantes</a>
         </Link>
+        <Logo src={logo} alt="Efood" />
         <span onClick={openCart} style={{ cursor: 'pointer' }}>
           {items.length} produto(s) no carrinho
         </span>

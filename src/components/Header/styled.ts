@@ -10,6 +10,15 @@ export const HeaderBackground = styled.header`
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+
+    .container {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
 `
 
 export const HeaderContainer = styled.div`
@@ -33,5 +42,4 @@ export const HeaderContainer = styled.div`
 export const Logo = styled.img`
   width: 125px;
   height: 58px;
-  cursor: pointer;
 `

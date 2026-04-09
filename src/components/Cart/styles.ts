@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { cores, breakpoints } from '../../styles'
 import closeIcon from '../../assets/images/close 1.png'
 import remover from '../../assets/images/lixeira-de-reciclagem 1.png'
 import { ButtonContainer } from '../Button/styles'
@@ -50,6 +50,10 @@ export const SideBar = styled.aside`
   padding: 16px 8px 0 8px;
   max-width: 360px;
   width: 100%;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 85%;
+  }
 
   img {
     width: 80px;

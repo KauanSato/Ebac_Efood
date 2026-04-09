@@ -38,7 +38,7 @@ export const Product = ({
       </S.TagContainer>
       <S.CardDiv>
         <S.Titulo>
-          {title}
+          <h3>{title}</h3>
           <div>
             {rating}
             <img src={Estrela} alt="Star" />

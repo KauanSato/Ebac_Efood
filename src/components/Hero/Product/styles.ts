@@ -3,38 +3,43 @@ import { cores } from '../../../styles'
 
 export const Card = styled.div`
   background-color: #fff;
-  width: 472px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  color: ${cores.vermelho};
   position: relative;
   border: 1px solid ${cores.vermelho};
 `
 
 export const Titulo = styled.h3`
-  font-size: 18px;
-  font-weight: 700;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 16px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
   div {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 8px;
+    font-weight: bold;
+    font-size: 18px;
   }
 `
 
 export const Descricao = styled.p`
   font-size: 14px;
-  font-weight: 400;
   line-height: 22px;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 `
 
 export const CardImage = styled.img`
   width: 100%;
-  height: 224px;
+  display: block;
+  height: 217px;
   object-fit: cover;
 `
 
@@ -54,15 +59,6 @@ export const TagMore = styled.div`
 `
 
 export const CardDiv = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: 8px;
-  padding-bottom: 16px;
-
-  .LearnMore {
-    position: absolute;
-    bottom: 16px;
-    left: 6px;
-    display: inline;
-  }
+  border-top: none;
 `
