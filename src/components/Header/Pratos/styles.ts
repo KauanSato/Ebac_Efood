@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { cores } from '../../../styles'
 
 export const Card = styled.div`
-  max-width: 304px;
+  max-width: 320px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,5 +30,4 @@ export const CardImage = styled.img`
   height: 167px;
   padding-bottom: 8px;
   display: block;
-  object-fit: cover;
 `

@@ -4,30 +4,29 @@ import HeroVector from '../../assets/images/Vector.png'
 export const HeaderBackground = styled.header`
   background-image: url(${HeroVector});
   display: flex;
-  height: 186px;
-  justify-content: center;
   align-items: center;
-  padding: 48px 0;
-  max-width: 100%;
-  z-index: 100;
+  padding: 40px 0;
   position: sticky;
   top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 `
 
 export const HeaderContainer = styled.div`
-  font-weight: 900;
-  font-size: 18px;
-  border: none;
-  background-color: transparent;
-  width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 900;
+  font-size: 18px;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 
   a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    background-color: transparent;
   }
 `
 

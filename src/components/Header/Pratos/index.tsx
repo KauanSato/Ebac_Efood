@@ -16,8 +16,8 @@ const Prato = ({ image, title, desc, onOpen }: Props) => {
       <S.CardImage src={image} />
       <S.Titulo>{title}</S.Titulo>
       <S.Descricao>{desc}</S.Descricao>
-      <Button onClick={onOpen} type="button" title="Adicionar ao carrinho">
-        Adicionar ao carrinho
+      <Button onClick={onOpen} type="button" title="Mais detalhes">
+        Mais detalhes
       </Button>
     </S.Card>
   )

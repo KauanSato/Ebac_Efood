@@ -30,7 +30,11 @@ const PratoList = ({ pratos }: Props) => {
             key={prato.id}
             title={prato.nome}
             image={prato.foto}
-            desc={prato.descricao}
+            desc={
+              prato.descricao.length
+                ? prato.descricao.slice(0, 150) + '...'
+                : prato.descricao
+            }
             preco={prato.preco}
             onOpen={() => setModal({ isVisible: true, data: prato })}
           />

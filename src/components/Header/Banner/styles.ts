@@ -3,31 +3,34 @@ import styled from 'styled-components'
 export const Imagem = styled.div`
   width: 100%;
   height: 280px;
-  display: flex;
+  display: block;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
   padding-left: 170px;
+  position: relative;
+  padding: 32px 0;
 `
 
 export const Descricao = styled.div`
-  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: flex;
+  height: 100%;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+`
 
-  h2 {
-    font-weight: 900;
-    font-size: 32px;
-    max-width: 675px;
-    margin-bottom: 32px;
-  }
-
-  p {
-    font-weight: 100;
-    font-size: 32px;
-    max-width: 100px;
-    padding-top: 24px;
-  }
+export const Categoria = styled.span`
+  font-weight: 100;
+  font-size: 32px;
+  text-transform: capitalize;
+`
+export const Titulo = styled.h2`
+  font-weight: 900;
+  font-size: 32px;
 `

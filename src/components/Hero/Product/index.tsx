@@ -7,7 +7,7 @@ type Props = {
   id: number
   image: string
   title: string
-  rating: string
+  rating: number
   desc: string
   categoria: string
   destaque?: boolean

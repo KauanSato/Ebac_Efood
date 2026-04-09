@@ -1,4 +1,4 @@
-import { Descricao, Imagem } from './styles'
+import * as S from './styles'
 
 type Props = {
   nome: string
@@ -8,16 +8,16 @@ type Props = {
 
 const Banner = ({ nome, categoria, capa }: Props) => {
   return (
-    <Imagem
+    <S.Imagem
       style={{
         backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.6)) , url(${capa})`
       }}
     >
-      <Descricao>
-        <p>{categoria}</p>
-        <h2>{nome}</h2>
-      </Descricao>
-    </Imagem>
+      <S.Descricao>
+        <S.Categoria>{categoria}</S.Categoria>
+        <S.Titulo>{nome}</S.Titulo>
+      </S.Descricao>
+    </S.Imagem>
   )
 }
 

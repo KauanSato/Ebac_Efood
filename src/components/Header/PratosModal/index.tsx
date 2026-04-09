@@ -1,6 +1,7 @@
 import * as S from './styles'
 import fechar from '../../../assets/images/close 1.png'
 import { InfoPrato } from '../PratosList'
+import { formataPreco } from '../../../models/formatters'
 
 type Props = {
   product: InfoPrato | null
@@ -24,7 +25,9 @@ const ProductModal = ({ product, isVisible, onClose }: Props) => {
             <p>
               Serve de <span>{product.porcao}</span>
             </p>
-            <S.BotaoModal>Adicionar ao carrinho - {product.preco}</S.BotaoModal>
+            <S.BotaoModal>
+              Adicionar ao carrinho - {formataPreco(product.preco)}
+            </S.BotaoModal>
           </div>
         </S.ModalContent>
       </S.ModalContainer>
