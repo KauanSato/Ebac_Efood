@@ -3,6 +3,7 @@ import { RootReducer } from '../../store'
 import * as S from './styles'
 import { formataPreco } from '../../models/formatters'
 import { close, remove } from '../../store/reducers/cart'
+import { open } from '../../store/reducers/checkout'
 import Button from '../Button'
 
 const Cart = () => {
@@ -12,6 +13,18 @@ const Cart = () => {
 
   const closeCart = () => {
     dispatch(close())
+  }
+
+  const verifyCart = () => {
+    if (items.length === 0) {
+      return alert('Voce nao pode continuar com o carrinho vazio')
+    }
+    return dispatch(open())
+  }
+
+  const openCheckout = () => {
+    closeCart()
+    verifyCart()
   }
 
   const removeItem = (id: number) => {
@@ -49,7 +62,11 @@ const Cart = () => {
           <p>Valor total</p>
           <p>{formataPreco(getValorTotal())}</p>
         </S.Price>
-        <Button type="button" title="Clique para continuar com a entrega">
+        <Button
+          onClick={openCheckout}
+          type="button"
+          title="Clique para continuar com a entrega"
+        >
           Continuar com a entrega
         </Button>
       </S.SideBar>

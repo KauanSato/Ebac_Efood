@@ -4,6 +4,7 @@ import Rotas from './routes'
 import { Provider } from 'react-redux'
 import { store } from './store'
 import Cart from './components/Cart'
+import Checkout from './components/Cart/Checkout'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Rotas />
         </div>
         <Cart />
+        <Checkout />
       </BrowserRouter>
     </Provider>
   )
